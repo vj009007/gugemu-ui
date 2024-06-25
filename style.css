@@ -1,0 +1,112 @@
+@font-face {
+    font-family: 'icomoon';
+    src:  url('images/icon/icomoon.eot?zedilj');
+    src:  url('images/icon/icomoon.eot?zedilj#iefix') format('embedded-opentype'),
+      url('images/icon/icomoon.ttf?zedilj') format('truetype'),
+      url('images/icon/icomoon.woff?zedilj') format('woff'),
+      url('images/icon/icomoon.svg?zedilj#icomoon') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: block;
+  }
+  
+  [class^="icon-"], [class*=" icon-"] {
+    /* use !important to prevent issues with browser extensions that change fonts */
+    font-family: 'icomoon' !important;
+    speak: never;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+  
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  
+  .icon-btn-arrow:before {
+    content: "\e900";
+  }
+  
+
+*, body {
+    font-family: "Poppins", sans-serif;
+    font-feature-settings: 'clig' off, 'liga' off;
+  }
+  body,
+  html{
+   overflow-x: hidden;
+  }
+  body:before{
+    content: "";
+    flex-shrink: 0;
+    width: 856.986px;
+    height: 62.307px;
+    transform: rotate(49.377deg);
+    flex-shrink: 0;
+    position: absolute;
+    border-radius: 856.986px;
+    background: #FFF;
+    filter: blur(222px);
+  }
+  .lineBefore::before{
+    content: '';
+    display: block;
+    position: absolute;
+    left: 0;
+    width: 40px;
+    height: 1px;
+    background: #ffffff99;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  .bg-item {
+      background: rgba(255, 255, 255, 0.04);
+      backdrop-filter: blur(7px);
+      height: 100%;
+      min-height: 80px;
+  }
+  .investor:before {
+      content: '';
+      display: block;
+      position: absolute;
+      border-radius: 200px;
+      background: linear-gradient(90deg, #F1F101 0%, rgba(241, 241, 1, 0.00) 100%);
+      filter: blur(325px);
+      width: 286.351px;
+      height: 364.998px;
+      flex-shrink: 0;
+      left: 0;
+  }
+  .ecosystem:before {
+    content: '';
+    border-radius: 200px;
+    background: linear-gradient(90deg, #65EDFF 0%, #65EDFF 100%);
+    width: 104.709px;
+    height: 204.986px;
+    transform: rotate(-153.194deg);
+    flex-shrink: 0;
+    filter: blur(450px);
+    position: absolute;
+    bottom: -10%;
+    display: block;
+    right: 0;
+  }
+  .about-section::before {
+    content: '';
+    display: block;
+    position: absolute;
+    background: url(./images/eco-bg.png) no-repeat left;
+    left: 0;
+    height: 1300px;
+    width: 600px;
+    top: -400px;
+    background-size: contain;
+}
+  @media (max-width: 800px) {
+    body:before{
+      width: 296.986px;
+      height: 42.307px;
+    }
+  }
