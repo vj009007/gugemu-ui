@@ -12,7 +12,7 @@
 <meta property="og:title" content="Jugemu.ai - Democratizing Generative AI with Blockchain" />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://jugemu.ai/" />
-<meta property="og:image" content="https://jugemu.ai/jugemu-banner.png" />
+<meta property="og:image" content="https://jugemu.ai/images/jugemu-banner.png" />
 <meta property="og:description" content="Jugemu.ai democratizes generative AI by integrating blockchain technology, providing users with seamless access to multiple AI models while ensuring data ownership and transparency. Join us in transforming the future of AI." />
 <meta property="og:site_name" content="Jugemu.ai" />
 <meta property="og:locale" content="en_US" />
@@ -22,13 +22,16 @@
 <meta name="twitter:site" content="@JugemuAI">
 <meta name="twitter:title" content="Jugemu.ai - Democratizing Generative AI with Blockchain">
 <meta name="twitter:description" content="Jugemu.ai democratizes generative AI by integrating blockchain technology, providing users with seamless access to multiple AI models while ensuring data ownership and transparency. Join us in transforming the future of AI.">
-<meta name="twitter:image" content="https://jugemu.ai/jugemu-banner.png">
+<meta name="twitter:image" content="https://jugemu.ai/images/jugemu-banner.png">
 <meta name="twitter:creator" content="@JugemuAI">
 
 <!-- Adding Poppins Font -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+<!-- Adding Aos Animation -->
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
 <!-- Adding Tailwind CSS External link -->
 <script src="https://cdn.tailwindcss.com"></script>
@@ -39,33 +42,47 @@
 <body class="bg-[#18191B] md:text-base text-sm font-normal leading-[175%] text-[#ffffffcc]">
   <header class="p-6">
       <div class="flex items-center justify-between">
-        <a href="/">
-          <img src="./images/logo.svg" alt="Jugemu.ai Logo" class="block">
-        </a>
-        <ul class="list-none p-0 m-0 md:flex hidden items-center gap-12">
-          <li><a href="#" class="text-sm font-normal leading-5 text-[#ffffff99] hover:text-[#65EDFF]">Blockchain</a></li>
+        <div class="flex items-center gap-3">
+         <div class="flex items-center gap-3">
+            <div class="lg:hidden hamburger flex-col">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <span class="relative z-[99] menu-name">Menu</span>
+         </div>
+            <a href="/">
+              <img src="./images/logo.svg" alt="Jugemu.ai Logo" class="block">
+            </a>
+        </div>
+        <ul class="list-none p-0 m-0 md:flex hidden items-center gap-12 navigation">
+          <li><a href="#blockchain" class="text-sm font-normal leading-5 text-[#ffffff99] hover:text-[#65EDFF]">Blockchain</a></li>
           <li><a href="#" class="text-sm font-normal leading-5 text-[#ffffff99] hover:text-[#65EDFF]">Ecosystem</a></li>
           <li><a href="#" class="text-sm font-normal leading-5 text-[#ffffff99] hover:text-[#65EDFF]">Investors</a></li>
-          <li><a href="#" class="text-sm font-normal leading-5 text-[#ffffff99] hover:text-[#65EDFF]">Contact</a></li>
+          <li><a href="#contact" class="text-sm font-normal leading-5 text-[#ffffff99] hover:text-[#65EDFF]">Contact</a></li>
         </ul>
-        <ul class="list-none p-0 m-0 flex items-center gap-4">
-          <li><a href="https://twitter.com/JugemuAI"><img src="./images/x-black.svg" alt="X Logo"></a></li>
-          <li><a href="#"><img src="./images/discord.svg" alt="Social Icon"></a></li>
-          <li><a href="#"><img src="./images/telegram.svg" alt="Social Icon"></a></li>
-          <li><a href="#"><img src="./images/github.svg" alt="Social Icon"></a></li>
-        </ul>
+        <div class="flex items-center gap-10">
+          <ul class="list-none p-0 m-0 flex items-center gap-4 social-icons">
+            <li><a href="https://twitter.com/JugemuAI"><img src="./images/x-black.svg" alt="X Logo"></a></li>
+            <li><a href="#"><img src="./images/discord.svg" alt="Social Icon"></a></li>
+            <li><a href="#"><img src="./images/telegram.svg" alt="Social Icon"></a></li>
+            <li><a href="https://github.com/JugemuAI"><img src="./images/github.svg" alt="Social Icon"></a></li>
+          </ul>
+          <a href="#" class="bg-[#65EDFF] border border-solid border-[#65EDFF] text-[#101112] text-[12px] font-medium leading-4 inline-flex items-center gap-2 md:px-6 px-3 md:py-3 py-2 rounded-[800px] md:w-auto w-full justify-center transition hover:border-[#65EDFF] hover:text-[#65EDFF] hover:bg-transparent">Open App <i class="icon-btn-arrow"></i></a>
+        </div>
       </div>
   </header>
+
   <section class="banner relative">
-    <!-- <img src="./images/banner-bg.png" alt="banner-bg" class="absolute right-0 z-[-1]" /> -->
+    <img src="./images/banner-bg.png" alt="banner-bg" class="absolute right-0 z-[-1]" />
     <div class="container mx-auto px-4">
       <div class="grid lg:grid-cols-2 items-center gap-4">
-        <div>
+        <div data-aos="fade-up" data-aos-duration="1000">
           <p class="text-sm font-normal leading-5 text-[#ffffff99] lineBefore relative ps-14">Powered by ZK technology</p>
           <h1 class="lg:text-[80px] text-[52px] font-normal lg:leading-[90%] leading-none text-white tracking-[-2px] mt-6">Democratize Generative AI</h1>
           <p class="lg:pt-[52px] pt-8 lg:max-w-[410px]">Enabling an infinitely scalable web of sovereign blockchains that feels like a single chain</p>
           <div class="lg:mt-[60px] mt-10"></div>
-          <a href="#" class="bg-[#65EDFF] border  border-solid border-[#65EDFF] text-[#101112] font-medium leading-6 inline-flex items-center gap-2 px-[52px] py-[19px] rounded-[800px] md:w-auto w-full justify-center transition hover:border-[#65EDFF] hover:text-[#65EDFF] hover:bg-transparent">Get started <i class="icon-btn-arrow"></i></a>
+          <a href="#" class="bg-[#65EDFF] border border-solid border-[#65EDFF] text-[#101112] font-medium leading-6 inline-flex items-center gap-2 px-[52px] py-[19px] rounded-[800px] sm:w-auto w-full justify-center transition hover:border-[#65EDFF] hover:text-[#65EDFF] hover:bg-transparent">Get started <i class="icon-btn-arrow"></i></a>
         </div>
         <div class="lg:order-2 order-[-1] relative">
           <img src="./images/banner-bg2.png" alt="banner" class="absolute z-[-1]" />
@@ -74,44 +91,47 @@
       </div>
     </div>
   </section>
-  <section class="blockchain lg:pt-0 pt-24">
+
+  <section class="blockchain lg:pt-0 pt-24" id="blockchain">
     <div class="container mx-auto px-4">
       <div class="grid lg:grid-cols-2 items-center gap-4">
-        <div class="lg:order-[-1] order-2 lg:mt-0 -mt-6">
+        <div class="lg:order-[-1] order-2 lg:mt-0 -mt-6"  data-aos="fade-right" data-aos-duration="1000">
           <img src="./images/blockchain.png" alt="Blockchain" class="block mx-auto">
         </div>
-        <div class="lg:max-w-[392px]">
+        <div class="lg:max-w-[392px]"  data-aos="fade-left" data-aos-duration="1000">
           <h2 class="lg:text-[40px] text-[32px] font-normal lg:leading-[90%] leading-9 text-white tracking-[-2px]"><span class="text-[#65EDFF]">Blockchain</span> for generative AIs</h2>
           <p class="lg:mt-6 mt-4">Stimulating the community slows down empirical image formation by optimizing budgets. Marketing communication subconsciously induces the marketing and sales department</p>
         </div>
       </div>
     </div>
   </section>
+
   <section class="about-section relative">
     <div class="container px-4 mx-auto relative pt-10">
       <img src="./images/star.png" alt="Star bg" class="absolute md:right-[5%] right-[-10%] z-[-1] lg:top-[-8%] bottom-[-20%]">
       <div class="text-center">
-        <h2 class="lg:text-[40px] text-[32px] font-normal lg:leading-[90%] leading-9 text-white tracking-[-2px]">What is <span class="text-[#65EDFF]">Jugemu?</span></h2>
-        <p class="lg:mt-6 mt-4">User can use multiple generative AIs at flat cost</p>
-        <div class="mt-12">
+        <h2 class="lg:text-[40px] text-[32px] font-normal lg:leading-[90%] leading-9 text-white tracking-[-2px]" data-aos="fade-up" data-aos-duration="1000">What is <span class="text-[#65EDFF]">Jugemu</span>?</h2>
+        <p class="lg:mt-6 mt-4"  data-aos="fade-up" data-aos-duration="1500">User can use multiple generative AIs at flat cost</p>
+        <div class="mt-12"  data-aos="fade-up" data-aos-duration="2000">
           <img src="./images/MacbookPro.png" alt="MacbookPro" class="md:block hidden mx-auto">
-          <img src="./images/iPhone15png.png" alt="MacbookPro" class="md:hidden block mx-auto">
+          <img src="./images/iPhone15.png" srcset="./images/iPhone2x.png" alt="MacbookPro" class="md:hidden block max-w-[80%] mx-auto">
         </div>
       </div>
     </div>
   </section>
 
-  <section class="ecosystem relative pt-36">
+  
+  <section class="ecosystem relative pt-36 lg:pb-10 pb-10">
     <div class="container px-4 mx-auto">
       <div class="grid lg:grid-cols-5 items-center gap-4">
-        <div class="lg:col-span-1">
+        <div class="lg:col-span-1"  data-aos="fade-right" data-aos-duration="1000">
           <h2 class="lg:text-[40px] text-[32px] font-normal lg:leading-[90%] leading-9 text-white tracking-[-2px]">Ecosystem</h2>
           <p class="mt-4">AI transaction recorded on chain and expand by token incentives</p>
           <div class="relative">
             <img src="./images/star-2.png" alt="star" class="md:hidden block absolute -top-5 z-[-1]">
           </div>
         </div>
-        <div class="lg:col-span-4 md:pt-0 pt-5">
+        <div class="lg:col-span-4 md:pt-0 pt-5" data-aos="fade-left" data-aos-duration="1000">
           <img src="./images/ecosystem.png" srcset="./images/ecosystem@2x.png 2x" alt="ecosystem Image" class="md:block w-full hidden mx-auto" />
           <img src="./images/ecosystem-mob.png" srcset="./images/ecosystem-mob@2x.png 2x" alt="ecosystem Image" class="md:hidden w-full block mx-auto" />
         </div>
@@ -119,38 +139,88 @@
     </div>
   </section>
 
-  <section class="investor relative lg:mt-40 mt-20">
+  <section class="investor relative lg:pt-10 pt-10">
     <div class="container relative px-4 mx-auto">
       <h2 class="lg:text-[40px] text-[32px] font-normal lg:leading-[90%] text-center leading-9 text-white tracking-[-2px]">Investors</h2>
-      <img src="./images/glass-box.png" alt="glass-box" class="absolute md:block hidden left-[22%] top-[-5%] z-[-1]" />
-      <div class="grid lg:grid-cols-3 grid-cols-2 mt-10 items-center md:gap-6 gap-2 relative z-[4] text-center">
-          <div class="lg:py-9 py-5  lg:px-20 px-7 bg-item rounded-[24px] relative flex items-center justify-center">
-              <img src="./images/gnome.svg" alt="Icon" class="block mx-auto" />
+      <div class="grid lg:grid-cols-4 grid-cols-2 mt-10 items-center md:gap-6 gap-2 relative z-[4] text-center">
+          <div class="lg:py-7 max-h-[86px] bg-white py-5 lg:px-20 px-7 bg-item rounded-[24px] relative flex items-center justify-center"  data-aos="fade-up" data-aos-duration="1000">
+              <img src="./images/capital.png" alt="Icon" class="block mx-auto" />
           </div>
-          <div class="lg:py-9 py-5  lg:px-20 px-7 bg-item rounded-[24px] relative flex items-center justify-center ">
-              <img src="./images/graylog.svg" alt="Icon" class="block mx-auto" />
+          <div class="lg:py-7 max-h-[86px] bg-white py-5 lg:px-20 px-7 bg-item rounded-[24px] relative flex items-center justify-center "  data-aos="fade-up" data-aos-duration="1400">
+              <img src="./images/flick.png" alt="Icon" class="block mx-auto" />
           </div>
-          <div class="lg:py-9 py-5  lg:px-20 px-7 bg-item rounded-[24px] relative flex items-center justify-center ">
-              <img src="./images/o-grommet.svg" alt="Icon" class="block mx-auto" />
+          <div class="lg:py-7 min-h-[86px] bg-white py-5 lg:px-20 px-7 bg-item rounded-[24px] relative flex items-center justify-center "  data-aos="fade-up" data-aos-duration="2000">
+              <img src="./images/fventures.png" alt="Icon" class="block mx-auto" />
           </div>
-          <div class="lg:py-9 py-5  lg:px-20 px-7 bg-item rounded-[24px] relative flex items-center justify-center ">
-              <img src="./images/hashnode.svg" alt="Icon" class="block mx-auto" />
-          </div>
-          <div class="lg:py-9 py-5  lg:px-20 px-7 bg-item rounded-[24px] relative flex items-center justify-center ">
-              <img src="./images/haskell.svg" alt="Icon" class="block mx-auto" />
-          </div>
-          <div class="lg:py-9 py-5  lg:px-20 px-7 bg-item rounded-[24px] relative flex items-center justify-center ">
-              <img src="./images/help.svg" alt="Icon" class="block mx-auto" />
+          <div class="lg:py-7 min-h-[86px] bg-white py-5 lg:px-20 px-7 bg-item rounded-[24px] relative flex items-center justify-center "  data-aos="fade-up" data-aos-duration="2500">
+              <img src="./images/miraise.png" alt="Icon" class="block mx-auto" />
           </div>
       </div>
     </div>
   </section>
-
-
-  <section class="form-section lg:mt-0 mt-20">
+ 
+  <section class="faq-section">
+    <div class="container px-4 mx-auto">
+        <div class="grid items-center lg:grid-cols-2 grid-cols-1">
+            <div class="w-full" data-aos="fade-right" data-aos-duration="1000">
+                <img src="./images/cicle.png" alt="Circle" class="w-full block mx-auto" />
+            </div>
+            <div class="w-full" data-aos="fade-left" data-aos-duration="1000">
+                <h2 class="mb-8 text-[40px] leading-[110%] tracking-[-2px] font-normal"> FAQ</h2>
+                <div class="accordion bg-[#212426] md:rounded-[24px] rounded-[20px] overflow-hidden">
+                    <div class="accordion-header cursor-pointer md:p-6 p-4 flex justify-between items-center" data-target="#accordion-content-1">
+                        <h3 class="text-xl font-normal tracking-[-1px] leading-[140%] text-white">What is Jugemu.AI?</h3>
+                        <span class="accordion-icon"><img src="./images/arrowdown.svg" alt="Icon" class="w-full" /></span>
+                    </div>
+                    <div class="accordion-content" id="accordion-content-1">
+                        <p class="text-[#ffffffcc] text-sm font-normal leading-[171.429%]">The media business accelerates creativity using the experience of previous campaigns. In fact, budget redistribution restores convergent social status</p>
+                    </div>
+                </div>
+                <div class="accordion bg-[#212426] md:rounded-[24px] rounded-[20px] mt-4">
+                    <div class="accordion-header cursor-pointer md:p-6 p-4 flex justify-between items-center" data-target="#accordion-content-2">
+                        <h3 class="text-xl font-normal tracking-[-1px] leading-[140%] text-white">How it works?</h3>
+                        <span class="accordion-icon"><img src="./images/arrowdown.svg" alt="Icon" class="w-full" /></span>
+                    </div>
+                    <div class="accordion-content" id="accordion-content-2">
+                        <p class="text-[#ffffffcc] text-sm font-normal leading-[171.429%]">This is the content of the second accordion item. It can contain any HTML elements you like.</p>
+                    </div>
+                </div>
+                <div class="accordion bg-[#212426] md:rounded-[24px] rounded-[20px] mt-4">
+                    <div class="accordion-header cursor-pointer md:p-6 p-4 flex justify-between items-center" data-target="#accordion-content-3">
+                        <h3 class="text-xl font-normal tracking-[-1px] leading-[140%] text-white">How much does it cost?</h3>
+                        <span class="accordion-icon"><img src="./images/arrowdown.svg" alt="Icon" class="w-full" /></span>
+                    </div>
+                    <div class="accordion-content" id="accordion-content-3">
+                        <p class="text-[#ffffffcc] text-sm font-normal leading-[171.429%]">This is the content of the third accordion item. It can contain any HTML elements you like.</p>
+                    </div>
+                </div>
+                <div class="accordion bg-[#212426] md:rounded-[24px] rounded-[20px] mt-4">
+                    <div class="accordion-header cursor-pointer md:p-6 p-4 flex justify-between items-center" data-target="#accordion-content-4">
+                        <h3 class="text-xl font-normal tracking-[-1px] leading-[140%] text-white">Is it safe?</h3>
+                        <span class="accordion-icon"><img src="./images/arrowdown.svg" alt="Icon" class="w-full" /></span>
+                    </div>
+                    <div class="accordion-content" id="accordion-content-4">
+                        <p class="text-[#ffffffcc] text-sm font-normal leading-[171.429%]">This is the content of the third accordion item. It can contain any HTML elements you like.</p>
+                    </div>
+                </div>
+                <div class="accordion bg-[#212426] md:rounded-[24px] rounded-[20px] mt-4">
+                    <div class="accordion-header cursor-pointer md:p-6 p-4 flex justify-between items-center" data-target="#accordion-content-5">
+                        <h3 class="text-xl font-normal tracking-[-1px] leading-[140%] text-white">Do you have a free trial?</h3>
+                        <span class="accordion-icon"><img src="./images/arrowdown.svg" alt="Icon" class="w-full" /></span>
+                    </div>
+                    <div class="accordion-content" id="accordion-content-5">
+                        <p class="text-[#ffffffcc] text-sm font-normal leading-[171.429%]">This is the content of the third accordion item. It can contain any HTML elements you like.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+  
+  <section class="form-section lg:mt-0 mt-20" id="contact">
     <div class="container mx-auto px-4">
       <div class="grid lg:grid-cols-2 items-center gap-4">
-        <div class="">
+        <div class=""  data-aos="fade-right" data-aos-duration="1000">
           <h2 class="lg:text-[40px] text-[32px] font-normal lg:leading-[90%] leading-9 text-white tracking-[-2px]">Join the <span class="text-[#65EDFF]">community</span></h2>
           <p class="lg:mt-6 mt-4">Subscribe to our news</p>
           <form action="" class="flex items-center md:flex-nowrap flex-wrap gap-6 w-full mt-9">
@@ -158,13 +228,14 @@
               <a href="#" class="bg-[#65EDFF] border md:w-auto w-full justify-center border-solid border-[#65EDFF] text-[#101112] font-medium leading-6 inline-flex items-center gap-2 px-[52px] py-[19px] rounded-[800px] transition hover:border-[#65EDFF] hover:text-[#65EDFF] hover:bg-transparent">Subscribe <i class="icon-btn-arrow"></i></a>
           </form>
         </div>
-        <div class="md:mx-0 -mx-4">
-          <img src="./images/robot2.png" alt="Robot" class="md:block hidden mx-auto">
+        <div class="md:mx-0 -mx-4"  data-aos="fade-left" data-aos-duration="1000">
+          <img src="./images/robot2.png" srcset="./images/robot2x.png" alt="Robot" class="md:block hidden mx-auto">
           <img src="./images/robot-mob.png" alt="Robot" class="md:hidden block w-full mx-auto relative">
         </div>
       </div>
     </div>
   </section>
+ 
 
   <footer>
     <div class="container px-4 mx-auto">
@@ -172,22 +243,65 @@
         <div class="flex flex-wrap gap-6 items-center justify-between">
           <a href="/"><img src="./images/logo.svg" alt="JugemuAI" class="order-1"></a>
           <ul class="list-none p-0 m-0 flex items-center gap-14 md:order-none order-5">
-            <li><a href="#" class="text-sm font-normal leading-5 text-[#ffffff99] hover:text-[#65EDFF]">Privacy Policy</a></li>
-            <li><a href="#" class="text-sm font-normal leading-5 text-[#ffffff99] hover:text-[#65EDFF]">Terms of use</a></li>
+            <li><a href="https://jugemuai.notion.site/Privacy-Policy-3890710fa6274c83910bdaf88db4441d" class="text-sm font-normal leading-5 text-[#ffffff99] hover:text-[#65EDFF]">Privacy Policy</a></li>
+            <li><a href="https://jugemuai.notion.site/Terms-of-Service-7d3c8b01f6a840ecb2f8bd142988d507" class="text-sm font-normal leading-5 text-[#ffffff99] hover:text-[#65EDFF]">Terms of use</a></li>
           </ul>
           <ul class="list-none p-0 m-0 flex items-center gap-4 md:order-3 order-1">
             <li><a href="https://twitter.com/JugemuAI"><img src="./images/x-black.svg" alt="X Logo"></a></li>
+            
             <li><a href="#"><img src="./images/discord.svg" alt="Social Icon"></a></li>
             <li><a href="#"><img src="./images/telegram.svg" alt="Social Icon"></a></li>
-            <li><a href="#"><img src="./images/github.svg" alt="Social Icon"></a></li>
+           
+            <li><a href="https://github.com/JugemuAI"><img src="./images/github.svg" alt="Social Icon"></a></li>
           </ul>
         </div>
         <div class="flex flex-wrap gap-6 items-center justify-between mt-6">
-          <p class="text-sm font-normal leading-5 text-[#ffffff99]">© 2024 Jugemu.AI. All Rights Reserved</p>
+          <p class="text-sm font-normal leading-5 text-[#ffffff99]">&copy; 2024 Jugemu.AI. All Rights Reserved</p>
           <p class="text-sm font-normal leading-5 text-[#ffffff99]">Desing support by <img src="./images/Combined-Shape.svg" alt="shape" class="inline-block mx-1"> roobinium.io</p>
         </div>
       </div>
     </div>
   </footer>
+
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+  <script>
+     $(document).ready(function() {
+            $(".hamburger").click(function() {
+                $('header').toggleClass('toggleMenu');
+                $('body').toggleClass('overflow-hidden');
+            });
+
+            const accordionHeaders = document.querySelectorAll('.accordion-header');
+
+            accordionHeaders.forEach(header => {
+                header.addEventListener('click', function() {
+                    const target = document.querySelector(header.dataset.target);
+                    const icon = header.querySelector('.accordion-icon img');
+
+                    if (!target.classList.contains('open')) {
+                        // Close all open accordions
+                        document.querySelectorAll('.accordion-content.open').forEach(openContent => {
+                            openContent.classList.remove('open');
+                            const openIcon = openContent.previousElementSibling.querySelector('.accordion-icon img');
+                            openIcon.src = './images/arrowdown.svg';
+                        });
+
+                        // Open the clicked accordion
+                        target.classList.add('open');
+                        icon.src = './images/arrowup.svg';
+                    } else {
+                        // Close the clicked accordion if it is already open
+                        target.classList.remove('open');
+                        icon.src = './images/arrowdown.svg';
+                    }
+                });
+            });
+
+            AOS.init();
+        });
+</script>
 </body>
 </html>
