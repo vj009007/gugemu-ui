@@ -225,6 +225,17 @@ body{
   header.toggleMenu .hamburger > span:nth-child(3) {
     transform: rotate(-45deg) translate(0, -5px);
   }
+  header.toggleMenu .navigation:before {
+    content: '';
+    display: block;
+    position: absolute;
+    background: url(./images/menu-bg.png) no-repeat center bottom;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    background-size: cover;
+    bottom: -20%;
+}
 }
 @media (max-width: 767px) {
   body:before {
