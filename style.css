@@ -86,7 +86,11 @@ section {
 .bg-invest {
   position: absolute;
 }
-.ecosystem:before {
+.ecosystem-bg {
+  position: absolute;
+  right: 0;
+}
+.ecosystem-bg:before {
   content: "";
   border-radius: 200px;
   background: linear-gradient(90deg, #65edff 0%, #65edff 100%);
@@ -170,6 +174,9 @@ body{
       justify-content: center;
       align-items: flex-start;
       gap: 20px;
+  }
+  section {
+      overflow: unset;
   }
   header .social-icons {
       position: fixed;
